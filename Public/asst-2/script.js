@@ -6,24 +6,32 @@ function createDiv(matchList){
 
     // iterate
      for (let item = 0; item < matchList.length; item += 1) { 
-     const cat = matchList[item].category;
-     const zip = matchList[item].zip;
-     const name = matchList[item].name;       
+      const name = matchList[item].name;  
+      const cat = matchList[item].category;
+      const address = matchList[item].address_line_1;
+      const city = matchList[item].city;
+      const zip = matchList[item].zip;
+           
 
-     // create div 
-     const div = document.createElement('div');
-     div.className = 'target'; 
-    //text
-    div.innerHTML = `<h3>Restaurant Name: ${name}</h3> 
-                           <h4>zipcode: ${zip}</h4> 
-                           <h4>category: ${cat}</h4>`;
-     $('.form').append(div);
+      // create div 
+      const div = document.createElement('div');
+      div.className = 'target'; 
+      //text
+      div.innerHTML = `<h3>Restaurant Name: ${name}</h3>
+                        <h4>Category: ${cat}</h4> 
+                        <h4>Address: ${address}</h4> 
+                        <h4>City: ${city}</h4>
+                        <h4>Zipcode: ${zip}</h4>`;
+
+      $('.form').append(div);
     }      
 }
 
 function displayRestaurants(jsonFromServer){
-
-    const restaurants = findRestaurants("Public School", jsonFromServer); //This test the search term input by the user but the function is meant to display the items that match search term
+    var searchWord = document.getElementById("search").value;
+    searchWord = wordToUpperCase(searchWord);
+    console.log("Word:", searchWord);
+    const restaurants = findRestaurants(searchWord, jsonFromServer); //This test the search term input by the user but the function is meant to display the items that match search term
     console.log("Restaurant that match", restaurants);
     createDiv(restaurants);
 }
@@ -42,6 +50,17 @@ function findRestaurants(restaurantCategory, restaurantList){
     }
 
     return restaurantsFound;
+}
+
+function wordToUpperCase(word){
+  var tempWord = word.split(' ');
+  var upperCaseWord = tempWord[0].charAt(0).toUpperCase() + tempWord[0].slice(1);
+
+  for(let i = 1; i < tempWord.length; i++){
+    upperCaseWord += " " + tempWord[i].charAt(0).toUpperCase() + tempWord[i].slice(1);
+  }
+
+  return upperCaseWord;
 }
 
 document.body.addEventListener('submit', async (e) => {
