@@ -53,7 +53,7 @@ function findRestaurants(restaurantCategory, restaurantList){
 }
 
 function wordToUpperCase(word){
-  var tempWord = word.split(' ');
+  var tempWord = word.toLowerCase().split(' ');
   var upperCaseWord = tempWord[0].charAt(0).toUpperCase() + tempWord[0].slice(1);
 
   for(let i = 1; i < tempWord.length; i++){
