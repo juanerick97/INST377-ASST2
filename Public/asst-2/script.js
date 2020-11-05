@@ -17,11 +17,11 @@ function createDiv(matchList){
       const div = document.createElement('div');
       div.className = 'target'; 
       //text
-      div.innerHTML = `<h3>Restaurant Name: ${name}</h3>
-                        <h4>Category: ${cat}</h4> 
-                        <h4>Address: ${address}</h4> 
-                        <h4>City: ${city}</h4>
-                        <h4>Zipcode: ${zip}</h4>`;
+      div.innerHTML = `<h4>Restaurant Name: ${name}</h4>
+                        <p>Category: ${cat}</p> 
+                        <p>Address: ${address}</p> 
+                        <p>City: ${city}</p>
+                        <p>Zipcode: ${zip}</p>`;
 
       $('.form').append(div);
     }      

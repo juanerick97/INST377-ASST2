@@ -1,7 +1,43 @@
 body {
     background: navy;
 }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px auto 0px;
+  }
+  
+  .container {
+    min-height: 100%;
+    
+  }
+.header {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    border-radius: 4px;
 
+}
+
+.target{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.target p {
+    justify-content: left;
+    max-width: 225px;
+    padding: 8px;
+  }
 #chartContainer {
     background: gray;
     border: 2px dotted black;
