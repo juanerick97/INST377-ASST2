@@ -1,12 +1,26 @@
 body {
-    background: navy;
+    background: rgb(0, 150, 0);
 }
 
+h1, h2{
+    color: bisque;
+}
 #chartContainer {
     background: gray;
     border: 2px dotted black;
     border-radius: 4px;
-    height: 500px;
-    width: 100%;
+    height: 40%;
+    width: 60%;
     margin-bottom: 15px;
+}
+
+.blocks{
+    background: rgb(150, 0, 0);
+    border: 2px dotted black;
+    vertical-align: middle;
+    border-radius: 4px;
+    height: 40%;
+    width: 25%;
+    margin-bottom: 15px;
+    
 }

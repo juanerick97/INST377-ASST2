@@ -1,8 +1,8 @@
 
 function createDiv(matchList){
-    if (document.querySelector('.target')) {
-        $('.target').remove();
-    };
+    // create div 
+    var div = document.querySelector('.target');
+    div.innerHTML = "";
 
     // iterate
      for (let item = 0; item < matchList.length; item += 1) { 
@@ -12,18 +12,14 @@ function createDiv(matchList){
       const city = matchList[item].city;
       const zip = matchList[item].zip;
            
-
-      // create div 
-      const div = document.createElement('div');
-      div.className = 'target'; 
       //text
-      div.innerHTML = `<h3>Restaurant Name: ${name}</h3>
-                        <h4>Category: ${cat}</h4> 
-                        <h4>Address: ${address}</h4> 
-                        <h4>City: ${city}</h4>
-                        <h4>Zipcode: ${zip}</h4>`;
-
-      $('.form').append(div);
+      div.innerHTML += `<div class = 'blocks'>
+                          <h1>Restaurant Name: ${name}</h3>
+                          <h2>Category: ${cat}</h4> 
+                          <h2>Address: ${address}</h4> 
+                          <h2>City: ${city}</h4>
+                          <h2>Zipcode: ${zip}</h4>
+                        <div>`;
     }      
 }
 
@@ -79,3 +75,7 @@ document.body.addEventListener('submit', async (e) => {
         console.log(err);
       });
   }); 
+
+  document.getElementById("search").addEventListener("click", function() {
+    document.querySelector('.target').innerHTML = "";
+  });
