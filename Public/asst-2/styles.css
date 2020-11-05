@@ -1,10 +1,58 @@
 body {
-    background: rgb(0, 150, 0);
+    background: rgb(7, 0, 44);
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    padding: 0px 0px auto 0px;
+    margin-top: 70px;
+  }
+  
+  .container {
+    min-height: 100%;
+    display: 1 125px 0; 
+  }
+.header {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-decoration: underline white;
 }
 
-h1, h2{
-    color: bisque;
+#search {
+    margin-bottom: 15px;;
+    width: 45%;
+    min-width: 360px;
 }
+
+#search {
+    border: 0;
+    padding: 10px;
+    box-shadow:0 0 4px 1px rgba(255, 234, 69)
+  }
+
+/* block styling */ 
+.target{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/* rest info*/
+.address, .target p, h4  {
+    color: rgb(15, 0, 88);
+    justify-content: left;
+    max-width: 325px; /* change to match gradient background sizing */
+    margin-bottom: 10px;
+  }
+
 #chartContainer {
     background: gray;
     border: 2px dotted black;
@@ -14,13 +62,15 @@ h1, h2{
     margin-bottom: 15px;
 }
 
-.blocks{
-    background: rgb(150, 0, 0);
-    border: 2px dotted black;
+.block{
+    background:linear-gradient(0deg, rgba(255,234,69,1) 14%, rgba(190,209,86,1) 56%, rgba(33,255,151,1) 100%);
+    border: 2px dotted rgb(15, 0, 88);
     vertical-align: middle;
     border-radius: 4px;
     height: 40%;
-    width: 25%;
+    width: 45%;
     margin-bottom: 15px;
+    min-width: 360px;
+    padding-left: 10px;
     
 }

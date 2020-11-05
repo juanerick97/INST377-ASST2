@@ -2,8 +2,8 @@
 function createDiv(matchList){
     // create div 
     var div = document.querySelector('.target');
-    div.innerHTML = "";
-
+    // div.innerHTML = "";
+    
     // iterate
      for (let item = 0; item < matchList.length; item += 1) { 
       const name = matchList[item].name;  
@@ -11,15 +11,20 @@ function createDiv(matchList){
       const address = matchList[item].address_line_1;
       const city = matchList[item].city;
       const zip = matchList[item].zip;
-           
-      //text
-      div.innerHTML += `<div class = 'blocks'>
-                          <h1>Restaurant Name: ${name}</h3>
-                          <h2>Category: ${cat}</h4> 
-                          <h2>Address: ${address}</h4> 
-                          <h2>City: ${city}</h4>
-                          <h2>Zipcode: ${zip}</h4>
-                        <div>`;
+      
+      //create div for each block for styling
+      const matchDiv = document.createElement('div');
+      matchDiv.className = 'block';
+      
+      //assign div text (restaurant match entry)
+      matchDiv.innerHTML = `<h4>${name}</h4>
+                            <p>${cat}</p> 
+                            <address class='address'>
+                            ${address}<br> 
+                            ${city}<br>
+                            ${zip}<br>
+                            </address>`;
+      div.append(matchDiv);
     }      
 }
 
@@ -37,9 +42,7 @@ function findRestaurants(restaurantCategory, restaurantList){
     var j = 0;
 
     for(var i = 0; i < restaurantList.length; i++){ //Goes through the restaurantList
-
         var currentRestaurant = restaurantList[i];
-
         if(restaurantCategory == currentRestaurant.category){ //Adds any object from the restaurant list that matches the search term
             restaurantsFound[j++] = currentRestaurant;
         }
@@ -55,7 +58,6 @@ function wordToUpperCase(word){
   for(let i = 1; i < tempWord.length; i++){
     upperCaseWord += " " + tempWord[i].charAt(0).toUpperCase() + tempWord[i].slice(1);
   }
-
   return upperCaseWord;
 }
 
