@@ -22,8 +22,7 @@ function createDiv(matchList){
 }
 
 function displayRestaurants(jsonFromServer){
-    const terms = document.querySelector('#search');
-    console.log(terms, 'term');
+
     const restaurants = findRestaurants("Public School", jsonFromServer); //This test the search term input by the user but the function is meant to display the items that match search term
     console.log("Restaurant that match", restaurants);
     createDiv(restaurants);
