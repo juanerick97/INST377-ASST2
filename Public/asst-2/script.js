@@ -41,7 +41,6 @@ function displayRestaurants(jsonFromServer){
 async function loadData(jsonFromServer) {
   var searchWord = document.getElementById("search").value;
   searchWord = wordToUpperCase(searchWord);
-  console.log("Word:", searchWord);
   if (searchWord === '') {
     searchWord = 'null'
   }
@@ -69,9 +68,6 @@ for(let i = 1; i < tempWord.length; i++){
 }
 return upperCaseWord;
 }
-const inpt = document.getElementById("search");
-console.log($('#search').value, 'val');
-console.log($('#search'), 'srch');
 
 
 $('#search').on('keyup change', async (e) => {// change, keyup
