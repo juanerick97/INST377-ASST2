@@ -1,5 +1,6 @@
 body {
     background: rgb(7, 0, 44);
+    font-family: 'Crete Round', serif;
 }
 .wrapper {
     display: flex;
@@ -24,15 +25,13 @@ body {
     padding: 4px 8px;
     border-radius: 4px;
     text-decoration: underline white;
+    font-size: 60%; 
 }
 
 #search {
     margin-bottom: 15px;;
-    width: 45%;
+    width: 25%;
     min-width: 360px;
-}
-
-#search {
     border: 0;
     padding: 10px;
     box-shadow:0 0 4px 1px rgba(255, 234, 69)
@@ -72,9 +71,14 @@ h4 {
     vertical-align: middle;
     border-radius: 4px;
     height: 40%;
-    width: 45%;
+    width: 25%;
     margin-bottom: 15px;
     min-width: 360px;
     padding-left: 10px;
     
 }
+
+/* need to add this so its set up for different screen resolutions
+@media screen and (max-width: 1000px) {
+}
+*/
