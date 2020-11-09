@@ -5,32 +5,34 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
     padding: 0px 0px auto 0px;
     margin-top: 2%;
-    justify-self: center;
+    justify-content: center;
   }
   
-  .container {
-    min-height: 100%;
-    display: 1 125px 0; 
-  }
 .header {
     color: #fff;
-    display: flex;
     flex-direction: row;
+    text-align: center;
     flex-wrap: wrap;
     align-items: center;
     margin: 0;
-    margin-left: 11%;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
     padding: 4px 8px;
     border-radius: 4px;
 }
 
+.form {
+display: flex;
+flex-direction: column;
+padding: 0px 0px auto 0px;
+margin-top: 2%;
+align-items: center;
+}
+
 #search {
-    margin-bottom: 15px;;
-    width: 50%;
+    margin-bottom: 1.75%;
+    width: 40%;
     min-width: 360px;
     border: 0;
     padding: 10px;
@@ -38,7 +40,7 @@ body {
   }
 
 /* block styling */ 
-.target{
+.target {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -46,10 +48,11 @@ body {
 
 h4 {
     text-transform: uppercase;
+    margin-top: 10px;
 }
 
 /* rest info*/
-.address, .target p, h4  {
+.address, target p, h4  {
     color: rgb(15, 0, 88);
     justify-content: left;
     max-width: 325px; /* change to match gradient background sizing */
@@ -62,7 +65,7 @@ h4 {
     border-radius: 4px;
     height: 40%;
     width: 25%;
-    margin-bottom: 15px;
+    margin-bottom: 3%;
     min-width: 360px;
     padding-left: 10px;
     
