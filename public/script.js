@@ -75,7 +75,7 @@ $('#search').on('keyup change', async (e) => {// change, keyup
 console.log(document.getElementById("search").value);
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray();
-  fetch("/api", { //dont forget to change it back to /api
+  fetch("http://localhost:3000/api", { //dont forget to change it back to /api
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
