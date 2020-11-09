@@ -1,12 +1,13 @@
 body {
-    background: rgb(7, 0, 44);
+    background: rgb(1, 151, 14);
 }
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 35%;
     padding: 0px 0px auto 0px;
-    margin-top: 70px;
+    margin-top: 2%;
+    justify-self: center;
   }
   
   .container {
@@ -20,10 +21,10 @@ body {
     flex-wrap: wrap;
     align-items: center;
     margin: 0;
-    margin-bottom: 25px;
+    margin-left: 8%;
+    margin-bottom: 1%;
     padding: 4px 8px;
     border-radius: 4px;
-    text-decoration: underline white;
 }
 
 #search {
@@ -57,18 +58,8 @@ h4 {
     margin-bottom: 10px;
   }
 
-#chartContainer {
-    background: gray;
-    border: 2px dotted black;
-    border-radius: 4px;
-    height: 40%;
-    width: 60%;
-    margin-bottom: 15px;
-}
-
 .block{
-    background:linear-gradient(0deg, rgba(255,234,69,1) 14%, rgba(190,209,86,1) 56%, rgba(33,255,151,1) 100%);
-    border: 2px dotted rgb(15, 0, 88);
+    background:linear-gradient(0deg, rgb(255, 238, 0) 14%, rgb(251, 255, 1) 56%, rgb(255, 174, 0) 100%);
     vertical-align: middle;
     border-radius: 4px;
     height: 40%;
@@ -77,4 +68,8 @@ h4 {
     min-width: 360px;
     padding-left: 10px;
     
+}
+
+.textbox{
+    height: 5%;
 }
