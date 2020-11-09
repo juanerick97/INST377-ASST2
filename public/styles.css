@@ -1,5 +1,6 @@
 body {
     background: rgb(1, 151, 14);
+    font-family: 'Crete Round', serif;
 }
 .wrapper {
     display: flex;
@@ -29,11 +30,8 @@ body {
 
 #search {
     margin-bottom: 15px;;
-    width: 45%;
+    width: 25%;
     min-width: 360px;
-}
-
-#search {
     border: 0;
     padding: 10px;
     box-shadow:0 0 4px 1px rgba(255, 234, 69)
@@ -63,7 +61,7 @@ h4 {
     vertical-align: middle;
     border-radius: 4px;
     height: 40%;
-    width: 45%;
+    width: 25%;
     margin-bottom: 15px;
     min-width: 360px;
     padding-left: 10px;

@@ -41,7 +41,6 @@ function displayRestaurants(jsonFromServer){
 async function loadData(jsonFromServer) {
   var searchWord = document.getElementById("search").value;
   searchWord = wordToUpperCase(searchWord);
-  console.log("Word:", searchWord);
   if (searchWord === '') {
     searchWord = 'null'
   }
@@ -69,9 +68,6 @@ for(let i = 1; i < tempWord.length; i++){
 }
 return upperCaseWord;
 }
-const inpt = document.getElementById("search");
-console.log($('#search').value, 'val');
-console.log($('#search'), 'srch');
 
 
 $('#search').on('keyup change', async (e) => {// change, keyup
@@ -79,7 +75,7 @@ $('#search').on('keyup change', async (e) => {// change, keyup
 console.log(document.getElementById("search").value);
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray();
-  fetch("http://localhost:3000/api", { //dont forget to change it back to /api
+  fetch("/api", { //dont forget to change it back to /api
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
