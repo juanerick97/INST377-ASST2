@@ -5,7 +5,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin-left: 35%;
+    margin-left: 30%;
     padding: 0px 0px auto 0px;
     margin-top: 2%;
     justify-self: center;
@@ -22,7 +22,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     margin: 0;
-    margin-left: 8%;
+    margin-left: 11%;
     margin-bottom: 1%;
     padding: 4px 8px;
     border-radius: 4px;
@@ -30,7 +30,7 @@ body {
 
 #search {
     margin-bottom: 15px;;
-    width: 25%;
+    width: 50%;
     min-width: 360px;
     border: 0;
     padding: 10px;
@@ -68,6 +68,3 @@ h4 {
     
 }
 
-.textbox{
-    height: 5%;
-}
